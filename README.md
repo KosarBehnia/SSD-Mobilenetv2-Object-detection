@@ -39,6 +39,13 @@ We define the input and output tensors using the get_tensor_by_name() method on 
 ## Performance Comparison
  
 We compared the performance of the CPU and GPU versions of the script on a sample video file. The CPU version processed the video at an average of 6 frames per second, while the GPU version processed the video at an average of 25 frames per second. Note that the exact performance may vary depending on your system configuration and the size of the input video file.
+Here is an example of the results that can be obtained by running the GPU version of the script on a suitable hardware configuration:
+https://youtu.be/ynF5kOjCRIU
+Here is an example of the results that can be obtained by running the CPU version of the script on a suitable hardware configuration:
+https://youtu.be/Xt-0smWi3UM
+
+It is apparent that the CPU version experiences a much greater number of missing frames.
+
 ## Coming Soon
 
  1- Multithreaded version: We are also working on a multithreaded version of this script that separates the video reading process from the object detection process using multiple threads. This version will be able to read frames from the video file at a faster rate than the object detection process, which can help to minimize frame missing. Stay tuned for updates!
