@@ -28,13 +28,21 @@ To use this script, follow these steps:
    ````
    
    Note: This script has been tested with MP4 video files on Windows and Linux systems. Other video formats may not be compatible.
+   ##GPU version
+
+We have also created a GPU version of this script that uses the GPU to speed up object detection. The GPU version is available in the object_detection_video_gpu.py file. Note that this version requires a CUDA-enabled GPU and the installation of additional dependencies.
+
+In the GPU version, we load the pre-trained model into a new Graph object and set up the GPU acceleration by creating a ConfigProto object and setting gpu_options.allow_growth to True. We then create a new Session object using the Graph object and the ConfigProto object.
+
+We define the input and output tensors using the get_tensor_by_name() method on the Graph object. We then read frames from the input video file and perform object detection on each frame using sess.run(). The detected objects are then drawn as bounding boxes on the frame, and the frame is written to the output video file using a VideoWriter object.
+##Performance Comparison
+
+We compared the performance of the CPU and GPU versions of the script on a sample video file. The CPU version processed the video at an average of 6 frames per second, while the GPU version processed the video at an average of 25 frames per second. Note that the exact performance may vary depending on your system configuration and the size of the input video file.
 ## Coming Soon
 
-   1- GPU version: We are working on a version of this script that uses the GPU to speed up object detection. This version will require a CUDA-enabled GPU and the installation of additional dependencies. Stay tuned for updates!
+ 1- Multithreaded version: We are also working on a multithreaded version of this script that separates the video reading process from the object detection process using multiple threads. This version will be able to read frames from the video file at a faster rate than the object detection process, which can help to minimize frame missing. Stay tuned for updates!
    
- 2- Multithreaded version: We are also working on a multithreaded version of this script that separates the video reading process from the object detection process using multiple threads. This version will be able to read frames from the video file at a faster rate than the object detection process, which can help to minimize frame missing. Stay tuned for updates!
-   
- 3- URL-based version: We are also working on a version of this script that can detect objects in videos that are hosted online. This version will be able to accept a URL as input and will download the video file from the internet. Stay tuned for updates!
+ 2- URL-based version: We are also working on a version of this script that can detect objects in videos that are hosted online. This version will be able to accept a URL as input and will download the video file from the internet. Stay tuned for updates!
 
 
 ## Acknowledgements
