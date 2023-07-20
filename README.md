@@ -31,14 +31,12 @@ To use this script, follow these steps:
 2. Open a terminal and navigate to the directory containing the `object_detection_video.py` file.
 3. Run the following command to detect objects in a video file:
 
-   `````
-   python object_detection_video.py --input <path_to_input_video> --output <path_to_output_video>
+ 
    ```
 
-   Replace `<path_to_input_video>` with the path to the input video file and `<path_to_output_video>` with the desired path for the output video file.
-   
-   Optionally, you can also specify a detection threshold using the `--threshold` argument. For example, to set the detection threshold to 0.5, run the following command:
-
+   Replace `<PATH_TO_CKPT>` with the path of the frozen model
+    Replace `<PATH_TO_LABELS> with the label maps of the trained dataset 
+ 
    ````
    python object_detection_video.py --input <path_to_input_video> --output <path_to_output_video> --threshold 0.5
    ````
@@ -46,6 +44,12 @@ To use this script, follow these steps:
    The default detection threshold is 0.5.
    
    Note: This script has been tested with MP4 video files on Windows and Linux systems. Other video formats may not be compatible.
+   Coming Soon
+
+    GPU version: We are working on a version of this script that uses the GPU to speed up object detection. This version will require a CUDA-enabled GPU and the installation of additional dependencies. Stay tuned for updates!
+    Multithreaded version: We are also working on a multithreaded version of this script that separates the video reading process from the object detection process using multiple threads. This version will be able to read frames from the video file at a faster rate than the object detection process, which can help to minimize frame missing. Stay tuned for updates!
+    URL-based version: We are also working on a version of this script that can detect objects in videos that are hosted online. This version will be able to accept a URL as input and will download the video file from the internet. Stay tuned for updates!
+
 
 ## Acknowledgements
 
