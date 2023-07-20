@@ -29,7 +29,7 @@ To use this script, follow these steps:
    
    Note: This script has been tested with MP4 video files on Windows and Linux systems. Other video formats may not be compatible.
    
-   ## GPU version
+## GPU version
 
 We have also created a GPU version of this script that uses the GPU to speed up object detection. The GPU version is available in the object_detection_video_gpu.py file. Note that this version requires a CUDA-enabled GPU and the installation of additional dependencies.
 
