@@ -37,11 +37,8 @@ To use this script, follow these steps:
    Replace `<PATH_TO_CKPT>` with the path of the frozen model
     Replace `<PATH_TO_LABELS> with the label maps of the trained dataset 
  
+  
    ````
-   python object_detection_video.py --input <path_to_input_video> --output <path_to_output_video> --threshold 0.5
-   ````
-
-   The default detection threshold is 0.5.
    
    Note: This script has been tested with MP4 video files on Windows and Linux systems. Other video formats may not be compatible.
    Coming Soon
