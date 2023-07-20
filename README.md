@@ -28,15 +28,16 @@ To use this script, follow these steps:
    ````
    
    Note: This script has been tested with MP4 video files on Windows and Linux systems. Other video formats may not be compatible.
-   ##GPU version
+   
+   ## GPU version
 
 We have also created a GPU version of this script that uses the GPU to speed up object detection. The GPU version is available in the object_detection_video_gpu.py file. Note that this version requires a CUDA-enabled GPU and the installation of additional dependencies.
 
 In the GPU version, we load the pre-trained model into a new Graph object and set up the GPU acceleration by creating a ConfigProto object and setting gpu_options.allow_growth to True. We then create a new Session object using the Graph object and the ConfigProto object.
 
 We define the input and output tensors using the get_tensor_by_name() method on the Graph object. We then read frames from the input video file and perform object detection on each frame using sess.run(). The detected objects are then drawn as bounding boxes on the frame, and the frame is written to the output video file using a VideoWriter object.
-##Performance Comparison
-
+## Performance Comparison
+ 
 We compared the performance of the CPU and GPU versions of the script on a sample video file. The CPU version processed the video at an average of 6 frames per second, while the GPU version processed the video at an average of 25 frames per second. Note that the exact performance may vary depending on your system configuration and the size of the input video file.
 ## Coming Soon
 
