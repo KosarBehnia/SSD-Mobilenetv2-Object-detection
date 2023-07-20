@@ -1,4 +1,4 @@
-# YOLO_Object_detection
+# SSD_Mobile net _Object_detection
 
 Object Detection in Videos and pictures using TensorFlow
 
